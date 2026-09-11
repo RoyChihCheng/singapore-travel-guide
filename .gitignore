@@ -1,0 +1,4 @@
+*.py
+*.tmp
+singapore-travel-guide/
+__pycache__/
