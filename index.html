@@ -72,6 +72,43 @@
       transform: translateY(-2px);
       box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
     }
+  
+    /* 新加坡官方街道墨綠色路牌風格 */
+    .sg-street-sign {
+      background-color: #0b4f34;
+      color: #ffffff;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, monospace, sans-serif;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-radius: 4px;
+      padding: 1px 7px;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid #063724;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.18);
+    }
+    
+    /* 地鐵線路彩色標籤 */
+    .mrt-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: 800;
+      border-radius: 6px;
+      padding: 2px 7px;
+      font-size: 0.72rem;
+      line-height: 1.25;
+      white-space: nowrap;
+    }
+    .mrt-ewl { background: #e8f5e9; color: #1b5e20; border: 1px solid #81c784; }
+    .mrt-nsl { background: #ffebee; color: #b71c1c; border: 1px solid #e57373; }
+    .mrt-nel { background: #f3e5f5; color: #4a148c; border: 1px solid #ba68c8; }
+    .mrt-ccl { background: #fff8e1; color: #b7791f; border: 1px solid #f6e05e; }
+    .mrt-dtl { background: #e1f5fe; color: #01579b; border: 1px solid #4fc3f7; }
+    .mrt-tel { background: #efebe9; color: #4e342e; border: 1px solid #bcaaa4; }
+    .mrt-sentosa { background: #fff3e0; color: #b45309; border: 1px solid #fcd34d; }
+    .mrt-shuttle { background: #ecfdf5; color: #047857; border: 1px solid #6ee7b7; }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-teal-500 selection:text-white pb-16 sm:pb-0">
@@ -93,6 +130,7 @@
       <nav class="hidden md:flex items-center gap-1 lg:gap-2 text-sm font-medium">
         <a href="#overview" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/80 transition-colors">行程總覽</a>
         <a href="#hotels" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/80 transition-colors">住宿佈局</a>
+        <a href="#mrt-guide" class="px-3 py-1.5 rounded-lg text-teal-300 hover:text-white hover:bg-slate-800/80 transition-colors font-bold">🚇 地鐵招牌對照</a>
         <a href="#itinerary" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/80 transition-colors">每日動線與實景</a>
         <a href="#reservations" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/80 transition-colors">景點預訂</a>
         <a href="#food" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/80 transition-colors">必吃美食</a>
@@ -192,18 +230,31 @@
               13 Keong Saik Rd., Singapore 089120
             </p>
 
-            <div class="bg-blue-50/70 border border-blue-100 rounded-xl p-3.5 space-y-2 text-xs text-slate-700 mb-4">
-              <div class="flex items-start gap-1.5">
-                <span class="font-bold text-blue-800 shrink-0">👀 實景認路特徵：</span>
-                <span>恭錫路是一整條保留完好的南洋騎樓排屋街。KINN Studios 位於 13 號，外觀為簡約米白純淨質感的四層復古老建築，騎樓下有木質小招牌。</span>
+            <div class="bg-blue-50/80 border border-blue-200 rounded-xl p-3.5 space-y-2.5 text-xs text-slate-700 mb-4">
+              <div class="flex items-center gap-2 pb-1.5 border-b border-blue-200/70">
+                <span class="font-bold text-blue-900 shrink-0">🪧 官方英文地址：</span>
+                <span class="sg-street-sign text-[10px]">KEONG SAIK RD</span>
+                <span class="font-mono text-xs font-bold text-slate-800">13 Keong Saik Rd., Singapore 089120</span>
               </div>
-              <div class="flex items-start gap-1.5">
-                <span class="font-bold text-blue-800 shrink-0">🚇 最近捷運出口：</span>
-                <span><strong>MRT Outram Park (歐南園站) Exit 4</strong> 步行約 4 分鐘；或 <strong>MRT Maxwell (麥士威站) Exit 2</strong> 步行約 5 分鐘。</span>
-              </div>
-              <div class="flex items-start gap-1.5">
-                <span class="font-bold text-blue-800 shrink-0">🍴 周邊地標：</span>
-                <span>飯店出門右轉走 1 分鐘就是百年「東亞餐室」；出門步行 5 分鐘即達「麥士威熟食中心」天天海南雞飯！</span>
+              <div class="space-y-1.5 text-[11.5px]">
+                <div class="flex items-start gap-1.5">
+                  <span class="font-bold text-blue-900 shrink-0">🚇 捷運出口指南：</span>
+                  <div class="space-y-1 text-slate-700">
+                    <div>
+                      <span class="mrt-pill mrt-tel">TEL 棕線</span> <strong>Maxwell [TE18] Exit 2</strong>：步行 4-5 分。站內指標跟隨 <span class="font-mono bg-blue-100/70 px-1 py-0.5 rounded text-blue-900 font-bold">Kadayanallur St / Kreta Ayer Rd</span>，沿 Neil Rd 步行至恭錫路轉入。
+                    </div>
+                    <div>
+                      <span class="mrt-pill mrt-ewl">EWL 綠線</span> <span class="mrt-pill mrt-nel">NEL 紫線</span> <span class="mrt-pill mrt-tel">TEL 棕線</span> <strong>Outram Park [EW16/NE3/TE17] Exit 4</strong>：步行 4 分。站內指標跟隨 <span class="font-mono bg-blue-100/70 px-1 py-0.5 rounded text-blue-900 font-bold">Keong Saik Rd / Dorsett Singapore</span>。
+                    </div>
+                    <div>
+                      <span class="mrt-pill mrt-dtl">DTL 藍線</span> <span class="mrt-pill mrt-nel">NEL 紫線</span> <strong>Chinatown [DT19/NE4] Exit A</strong>：步行 7-8 分。出站沿 <span class="font-mono">Pagoda St</span> 漫步至橋南路右轉。
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-start gap-1.5 pt-1 border-t border-blue-100">
+                  <span class="font-bold text-blue-900 shrink-0">👀 街道與店面特徵：</span>
+                  <span>恭錫路為經典南洋騎樓排屋街。KINN Studios 位於 13 號，米白色四層復古老屋，騎樓下有木質招牌；出門右轉 1 分鐘即達 <strong>Tong Ah Eating House (東亞餐室, 35 Keong Saik Rd)</strong>；街口為米其林 <strong>Kok Sen Restaurant (國成球記, 2-4 Keong Saik Rd)</strong>；正對新橋路對街為大型現代飯店 <strong>Dorsett Singapore</strong>。</span>
+                </div>
               </div>
             </div>
           </div>
@@ -245,18 +296,28 @@
               5 Fraser St, DUO Tower, Singapore 189354
             </p>
 
-            <div class="bg-amber-50/70 border border-amber-100 rounded-xl p-3.5 space-y-2 text-xs text-slate-700 mb-4">
-              <div class="flex items-start gap-1.5">
-                <span class="font-bold text-amber-900 shrink-0">👀 實景認路特徵：</span>
-                <span>由國際大師 Ole Scheeren 設計的「雙景坊 (DUO)」，兩棟外觀佈滿<strong>巨大的曲面六角形蜂巢網格遮陽孔</strong>，在市區極為醒目，絕不可能認錯！</span>
+            <div class="bg-amber-50/80 border border-amber-200 rounded-xl p-3.5 space-y-2.5 text-xs text-slate-700 mb-4">
+              <div class="flex items-center gap-2 pb-1.5 border-b border-amber-200/70">
+                <span class="font-bold text-amber-950 shrink-0">🪧 官方英文地址：</span>
+                <span class="sg-street-sign text-[10px]">FRASER ST</span>
+                <span class="font-mono text-xs font-bold text-slate-800">5 Fraser St, DUO Tower, Singapore 189354</span>
               </div>
-              <div class="flex items-start gap-1.5">
-                <span class="font-bold text-amber-900 shrink-0">🚇 最近捷運出口：</span>
-                <span><strong>MRT Bugis (武吉士站，藍線/綠線) Exit E</strong>，直接從地下冷氣連通道電梯直通飯店大廳，即使下大雨也完全淋不到雨！</span>
-              </div>
-              <div class="flex items-start gap-1.5">
-                <span class="font-bold text-amber-900 shrink-0">🍸 頂級設施亮點：</span>
-                <span>25 樓高空無邊際泳池＋39 樓頂樓環景帳篷酒吧 <strong>Mr. Stork</strong>，對面過馬路即達世界級酒吧 <strong>Atlas Bar</strong>！</span>
+              <div class="space-y-1.5 text-[11.5px]">
+                <div class="flex items-start gap-1.5">
+                  <span class="font-bold text-amber-950 shrink-0">🚇 捷運出口指南：</span>
+                  <div class="space-y-1 text-slate-700">
+                    <div>
+                      <span class="mrt-pill mrt-ewl">EWL 綠線</span> <span class="mrt-pill mrt-dtl">DTL 藍線</span> <strong>Bugis [EW12/DT14] Exit E</strong>：地下冷氣連通道直通 <span class="font-mono bg-amber-100 px-1 py-0.5 rounded text-amber-900 font-bold">DUO Galleria B3</span>，搭電梯直上飯店大廳，全程不需走戶外、雨天完全免傘。
+                    </div>
+                    <div>
+                      <span class="mrt-pill mrt-ewl">EWL 綠線</span> <span class="mrt-pill mrt-dtl">DTL 藍線</span> <strong>Bugis [EW12/DT14] Exit B</strong>：前往甘榜格南阿拉伯街與 Zam Zam 的地面出口，站內指標跟隨 <span class="font-mono bg-amber-100 px-1 py-0.5 rounded text-amber-900 font-bold">Victoria St / Arab St</span>。
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-start gap-1.5 pt-1 border-t border-amber-200/70">
+                  <span class="font-bold text-amber-950 shrink-0">👀 建築與周邊地標：</span>
+                  <span>由建築大師 Ole Scheeren 打造之 <strong>DUO Tower</strong>，兩棟曲面六角形蜂巢遮陽孔超高樓，極度醒目；飯店頂樓 39 樓為 <strong>Mr. Stork (Rooftop Bar)</strong>；25 樓為 <strong>Alley on 25 & Infinity Pool</strong>；穿過 North Bridge Rd 對街即是裝飾藝術風格摩天樓 <strong>Parkview Square (僑福廣場 / Atlas Bar)</strong>。</span>
+                </div>
               </div>
             </div>
           </div>
@@ -270,6 +331,171 @@
             Google 地圖導航直達 ↗
           </a>
           <span class="text-[11px] text-slate-400">風格：國際五星高空奢華生活酒店</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- ==================== 新加坡地鐵路網與現場英文招牌對照大指南 (MRT & Signboard Master Guide) ==================== -->
+  <section id="mrt-guide" class="py-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 rounded-2xl border border-slate-700 shadow-xl overflow-hidden text-white p-6 sm:p-8">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-xl bg-teal-500/20 text-teal-300 border border-teal-500/40 flex items-center justify-center font-bold text-2xl shadow-inner">
+            🚇
+          </div>
+          <div>
+            <div class="inline-flex items-center gap-2 px-2.5 py-0.5 rounded-full bg-teal-500/10 text-teal-300 border border-teal-500/30 text-[11px] font-bold mb-1">
+              現地對照必備手冊
+            </div>
+            <h2 class="text-xl sm:text-2xl font-black tracking-tight text-white">
+              新加坡地鐵 (MRT) 6 大主力線路 ＆ 現場實景英文招牌速查
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-400 mt-0.5">
+              辨識「墨綠底白字路牌」、「地鐵線路顏色代碼」與「出口指標英文關鍵字」，自由行抬頭即懂、絕不迷路
+            </p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700 text-xs text-slate-300">
+            全行程地鐵站代碼已核對最新 2026 狀態
+          </span>
+        </div>
+      </div>
+
+      <!-- 6大線路顏色矩陣 -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-6">
+        <!-- EWL -->
+        <div class="bg-slate-800/80 rounded-xl p-4 border border-emerald-500/30">
+          <div class="flex items-center justify-between mb-2">
+            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs font-black bg-emerald-950 text-emerald-300 border border-emerald-500">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#009640]"></span>
+              EWL 東西線 (綠線)
+            </span>
+            <span class="font-mono text-xs font-bold text-emerald-400">Green Line</span>
+          </div>
+          <p class="text-xs text-slate-300 mb-2 leading-relaxed">
+            貫穿樟宜機場與市中心的核心主動脈。
+          </p>
+          <div class="text-[11px] text-slate-400 space-y-1 bg-slate-900/60 p-2.5 rounded-lg">
+            <div><strong>關鍵停靠：</strong><span class="text-emerald-300 font-mono">Changi Airport [CG2]</span>、<span class="text-emerald-300 font-mono">Tanah Merah [EW4]</span> (同月台轉乘)、<span class="text-emerald-300 font-mono">Bugis [EW12]</span> (Andaz 酒店)、<span class="text-emerald-300 font-mono">City Hall [EW13]</span>、<span class="text-emerald-300 font-mono">Raffles Place [EW14]</span> (魚尾獅)、<span class="text-emerald-300 font-mono">Outram Park [EW16]</span> (KINN Studios)。</div>
+          </div>
+        </div>
+
+        <!-- NSL -->
+        <div class="bg-slate-800/80 rounded-xl p-4 border border-rose-500/30">
+          <div class="flex items-center justify-between mb-2">
+            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs font-black bg-rose-950 text-rose-300 border border-rose-500">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#D42E12]"></span>
+              NSL 南北線 (紅線)
+            </span>
+            <span class="font-mono text-xs font-bold text-rose-400">Red Line</span>
+          </div>
+          <p class="text-xs text-slate-300 mb-2 leading-relaxed">
+            通往萬態野生動物保護區、烏節路與濱海灣。
+          </p>
+          <div class="text-[11px] text-slate-400 space-y-1 bg-slate-900/60 p-2.5 rounded-lg">
+            <div><strong>關鍵停靠：</strong><span class="text-rose-300 font-mono">Khatib [NS14]</span> (Exit A 轉乘萬態接駁車直通夜間動物園)、<span class="text-rose-300 font-mono">Orchard [NS22]</span>、<span class="text-rose-300 font-mono">Raffles Place [NS26]</span>、<span class="text-rose-300 font-mono">Marina Bay [NS27]</span>。</div>
+          </div>
+        </div>
+
+        <!-- NEL -->
+        <div class="bg-slate-800/80 rounded-xl p-4 border border-purple-500/30">
+          <div class="flex items-center justify-between mb-2">
+            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs font-black bg-purple-950 text-purple-300 border border-purple-500">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#9016B2]"></span>
+              NEL 東北線 (紫線)
+            </span>
+            <span class="font-mono text-xs font-bold text-purple-400">Purple Line</span>
+          </div>
+          <p class="text-xs text-slate-300 mb-2 leading-relaxed">
+            通往聖淘沙輕軌、牛車水、克拉碼頭美食與小印度。
+          </p>
+          <div class="text-[11px] text-slate-400 space-y-1 bg-slate-900/60 p-2.5 rounded-lg">
+            <div><strong>關鍵停靠：</strong><span class="text-purple-300 font-mono">HarbourFront [NE1]</span> (VivoCity 3F 轉聖淘沙輕軌)、<span class="text-purple-300 font-mono">Outram Park [NE3]</span> (KINN)、<span class="text-purple-300 font-mono">Chinatown [NE4]</span>、<span class="text-purple-300 font-mono">Clarke Quay [NE5]</span> (松發/珍寶)、<span class="text-purple-300 font-mono">Little India [NE7]</span>。</div>
+          </div>
+        </div>
+
+        <!-- CCL -->
+        <div class="bg-slate-800/80 rounded-xl p-4 border border-amber-500/30">
+          <div class="flex items-center justify-between mb-2">
+            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs font-black bg-amber-950 text-amber-300 border border-amber-500">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#FA9E0D]"></span>
+              CCL 環線 (黃/橘線)
+            </span>
+            <span class="font-mono text-xs font-bold text-amber-400">Circle Line</span>
+          </div>
+          <p class="text-xs text-slate-300 mb-2 leading-relaxed">
+            串聯濱海灣海灣舫與港灣碼頭的環狀動脈。
+          </p>
+          <div class="text-[11px] text-slate-400 space-y-1 bg-slate-900/60 p-2.5 rounded-lg">
+            <div><strong>關鍵停靠：</strong><span class="text-amber-300 font-mono">HarbourFront [CC29]</span>、<span class="text-amber-300 font-mono">Bayfront [CE1]</span> (金沙商場/水舞秀/雙冷室花園)、<span class="text-amber-300 font-mono">Promenade [CC4]</span>、<span class="text-amber-300 font-mono">Dhoby Ghaut [CC1]</span>。</div>
+          </div>
+        </div>
+
+        <!-- DTL -->
+        <div class="bg-slate-800/80 rounded-xl p-4 border border-blue-500/30">
+          <div class="flex items-center justify-between mb-2">
+            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs font-black bg-blue-950 text-blue-300 border border-blue-500">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#005EC4]"></span>
+              DTL 濱海市區線 (藍線)
+            </span>
+            <span class="font-mono text-xs font-bold text-blue-400">Downtown Line</span>
+          </div>
+          <p class="text-xs text-slate-300 mb-2 leading-relaxed">
+            深入市中心、老巴剎夜市、金沙灣與武吉士商圈。
+          </p>
+          <div class="text-[11px] text-slate-400 space-y-1 bg-slate-900/60 p-2.5 rounded-lg">
+            <div><strong>關鍵停靠：</strong><span class="text-blue-300 font-mono">Bugis [DT14]</span> (Andaz 酒店直通)、<span class="text-blue-300 font-mono">Bayfront [DT16]</span> (金沙)、<span class="text-blue-300 font-mono">Telok Ayer [DT18]</span> (老巴剎沙爹街)、<span class="text-blue-300 font-mono">Chinatown [DT19]</span>、<span class="text-blue-300 font-mono">Little India [DT12]</span>。</div>
+          </div>
+        </div>
+
+        <!-- TEL -->
+        <div class="bg-slate-800/80 rounded-xl p-4 border border-amber-800/50">
+          <div class="flex items-center justify-between mb-2">
+            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs font-black bg-stone-900 text-stone-200 border border-stone-500">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#9D5B25]"></span>
+              TEL 湯東線 (棕線)
+            </span>
+            <span class="font-mono text-xs font-bold text-stone-300">Brown Line</span>
+          </div>
+          <p class="text-xs text-slate-300 mb-2 leading-relaxed">
+            新穎直達線路！天天海南雞飯與濱海灣花園首選。
+          </p>
+          <div class="text-[11px] text-slate-400 space-y-1 bg-slate-900/60 p-2.5 rounded-lg">
+            <div><strong>關鍵停靠：</strong><span class="text-stone-300 font-mono">Maxwell [TE18]</span> (麥士威天天雞飯/佛牙寺)、<span class="text-stone-300 font-mono">Outram Park [TE17]</span> (KINN)、<span class="text-stone-300 font-mono">Gardens by the Bay [TE22]</span> (雙冷室花園南門直達)、<span class="text-stone-300 font-mono">Marine Parade [TE26]</span> (加東娘惹街)。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 現場標牌與招牌辨認 3 大秘訣 -->
+      <div class="mt-6 pt-6 border-t border-slate-800 grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+        <div class="bg-slate-800/50 p-3.5 rounded-xl border border-slate-700/60">
+          <div class="flex items-center gap-2 font-bold text-teal-300 mb-1.5">
+            <span>🪧 秘訣 1：認明墨綠底白字路牌</span>
+          </div>
+          <p class="text-slate-300 leading-relaxed">
+            新加坡街道名稱全部使用長方形墨綠色鋼板、白色大寫英文字，如 <span class="sg-street-sign text-[10px]">KEONG SAIK RD</span>、<span class="sg-street-sign text-[10px]">SOUTH BRIDGE RD</span>、<span class="sg-street-sign text-[10px]">BOON TAT ST</span>。路口看綠牌即可 100% 確認自己身處的街道。
+          </p>
+        </div>
+
+        <div class="bg-slate-800/50 p-3.5 rounded-xl border border-slate-700/60">
+          <div class="flex items-center gap-2 font-bold text-amber-300 mb-1.5">
+            <span>🚪 秘訣 2：捷運出站對照英文指標</span>
+          </div>
+          <p class="text-slate-300 leading-relaxed">
+            出閘門抬頭看黑色/深灰色指示燈箱，尋找出口編號（如 <span class="bg-slate-700 font-mono px-1.5 py-0.5 rounded text-amber-200 font-bold">Exit 2</span> 或 <span class="bg-slate-700 font-mono px-1.5 py-0.5 rounded text-amber-200 font-bold">Exit E</span>），底下皆標註目的地英文，如 "Maxwell Food Centre"、"DUO Tower"、"Pagoda Street"，對照本手冊走絕不迷失！
+          </p>
+        </div>
+
+        <div class="bg-slate-800/50 p-3.5 rounded-xl border border-slate-700/60">
+          <div class="flex items-center gap-2 font-bold text-rose-300 mb-1.5">
+            <span>🏪 秘訣 3：熟食中心認準官方攤號</span>
+          </div>
+          <p class="text-slate-300 leading-relaxed">
+            熟食中心（如麥士威、老巴剎）攤位均有官方編號牌。天天海南雞飯為 <span class="bg-slate-700 font-mono px-1.5 py-0.5 rounded text-rose-200 font-bold">#01-10 & #01-11</span>，老巴剎沙爹街為 <span class="bg-slate-700 font-mono px-1.5 py-0.5 rounded text-rose-200 font-bold">Best Satay 7 & 8</span>，認準號碼點餐精準無誤。
+          </p>
         </div>
       </div>
     </div>
@@ -304,7 +530,17 @@
               <td class="py-4 px-4 sm:px-6 font-bold text-slate-900">
                 Day 1 (9/13 日)<br><span class="text-xs text-teal-600 font-normal">中午抵達</span>
               </td>
-              <td class="py-4 px-4 sm:px-6">樟宜 ➔ 牛車水 ➔ 金融區</td>
+              <td class="py-4 px-4 sm:px-6">
+                <div class="font-semibold text-slate-900">樟宜 ➔ 牛車水 ➔ 金融區</div>
+                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                  <span class="mrt-pill mrt-ewl text-[10px]">EWL 綠線</span>
+                  <span class="font-mono text-[10.5px] text-slate-700">CG2 ➔ EW16</span>
+                  <span class="mrt-pill mrt-tel text-[10px]">TEL 棕線</span>
+                  <span class="font-mono text-[10.5px] text-slate-700">TE18</span>
+                  <span class="mrt-pill mrt-dtl text-[10px]">DTL 藍線</span>
+                  <span class="font-mono text-[10.5px] text-slate-700">DT18</span>
+                </div>
+              </td>
               <td class="py-4 px-4 sm:px-6">星耀樟宜 40m 雨漩渦瀑布、牛車水歷史古街 (佛牙寺、馬里安曼廟)、老巴剎沙爹夜市</td>
               <td class="py-4 px-4 sm:px-6 font-medium text-rose-700">天天/阿仔海南雞飯、東興傳統蛋撻、老巴剎 7&8 號炭火沙爹配啤酒</td>
               <td class="py-4 px-4 sm:px-6 font-semibold text-blue-700">KINN Studios</td>
@@ -313,7 +549,15 @@
               <td class="py-4 px-4 sm:px-6 font-bold text-slate-900">
                 Day 2 (9/14 一)<br><span class="text-xs text-amber-600 font-normal">全日聖淘沙</span>
               </td>
-              <td class="py-4 px-4 sm:px-6">聖淘沙島 (Sentosa)</td>
+              <td class="py-4 px-4 sm:px-6">
+                <div class="font-semibold text-slate-900">聖淘沙島 (Sentosa)</div>
+                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                  <span class="mrt-pill mrt-nel text-[10px]">NEL 紫線</span>
+                  <span class="font-mono text-[10.5px] text-slate-700">NE1 (港灣)</span>
+                  <span class="mrt-pill mrt-sentosa text-[10px]">Sentosa Express</span>
+                  <span class="font-mono text-[10.5px] text-slate-700">Resorts World ➔ Beach</span>
+                </div>
+              </td>
               <td class="py-4 px-4 sm:px-6 font-medium text-slate-900">
                 <span class="inline-block bg-amber-200 text-amber-900 text-[11px] px-2 py-0.5 rounded font-bold mr-1">週一人少！</span>
                 新加坡環球影城 USS、變形金剛/木乃伊/小小兵新區、西樂索海灘落日漫步
@@ -325,7 +569,19 @@
               <td class="py-4 px-4 sm:px-6 font-bold text-slate-900">
                 Day 3 (9/15 二)<br><span class="text-xs text-teal-600 font-normal">經典地標日</span>
               </td>
-              <td class="py-4 px-4 sm:px-6">市政區 ➔ 濱海灣花園 ➔ 克拉碼頭</td>
+              <td class="py-4 px-4 sm:px-6">
+                <div class="font-semibold text-slate-900">市政區 ➔ 濱海灣花園 ➔ 克拉碼頭</div>
+                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                  <span class="mrt-pill mrt-nsl text-[10px]">NSL 紅線</span>
+                  <span class="font-mono text-[10.5px] text-slate-700">NS26</span>
+                  <span class="mrt-pill mrt-tel text-[10px]">TEL 棕線</span>
+                  <span class="font-mono text-[10.5px] text-slate-700">TE22</span>
+                  <span class="mrt-pill mrt-dtl text-[10px]">DTL 藍線</span>
+                  <span class="font-mono text-[10.5px] text-slate-700">DT16</span>
+                  <span class="mrt-pill mrt-nel text-[10px]">NEL 紫線</span>
+                  <span class="font-mono text-[10.5px] text-slate-700">NE5</span>
+                </div>
+              </td>
               <td class="py-4 px-4 sm:px-6">魚尾獅公園接水照、舊禧街彩虹百葉警局、濱海灣雙冷室(花穹+雲霧林)、擎天樹燈光秀、金沙水舞秀、克拉碼頭遊船</td>
               <td class="py-4 px-4 sm:px-6 font-medium text-rose-700">松發肉骨茶(克拉碼頭總店免費續熱湯)、金沙商城美食、Satay by the Bay</td>
               <td class="py-4 px-4 sm:px-6 font-semibold text-blue-700">KINN Studios</td>
@@ -334,7 +590,18 @@
               <td class="py-4 px-4 sm:px-6 font-bold text-slate-900">
                 Day 4 (9/16 三)<br><span class="text-xs text-emerald-700 font-bold">夜間野生探險</span>
               </td>
-              <td class="py-4 px-4 sm:px-6">小印度 ➔ 加東 ➔ 萬態夜間動物園</td>
+              <td class="py-4 px-4 sm:px-6">
+                <div class="font-semibold text-slate-900">小印度 ➔ 加東 ➔ 萬態夜間動物園</div>
+                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                  <span class="mrt-pill mrt-dtl text-[10px]">DTL 藍線</span>
+                  <span class="font-mono text-[10.5px] text-slate-700">DT12</span>
+                  <span class="mrt-pill mrt-tel text-[10px]">TEL 棕線</span>
+                  <span class="font-mono text-[10.5px] text-slate-700">TE26</span>
+                  <span class="mrt-pill mrt-nsl text-[10px]">NSL 紅線</span>
+                  <span class="font-mono text-[10.5px] text-slate-700">NS14</span>
+                  <span class="mrt-pill mrt-shuttle text-[10px]">Mandai Shuttle</span>
+                </div>
+              </td>
               <td class="py-4 px-4 sm:px-6 font-medium text-slate-900">
                 <span class="inline-block bg-emerald-200 text-emerald-950 text-[11px] px-2 py-0.5 rounded font-bold mr-1">新加入重點！</span>
                 小印度彩繪洋樓、加東坤成路粉彩店屋、珍寶海鮮辣椒螃蟹晚餐、<b>萬態夜間野生動物園 Night Safari 導覽電車與夜秀</b>
@@ -346,7 +613,14 @@
               <td class="py-4 px-4 sm:px-6 font-bold text-slate-900">
                 Day 5 (9/17 四)<br><span class="text-xs text-rose-600 font-normal">換宿奢享</span>
               </td>
-              <td class="py-4 px-4 sm:px-6">甘榜格南 ➔ Andaz 頂級放鬆</td>
+              <td class="py-4 px-4 sm:px-6">
+                <div class="font-semibold text-slate-900">甘榜格南 ➔ Andaz 頂級放鬆</div>
+                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                  <span class="mrt-pill mrt-ewl text-[10px]">EWL 綠線</span>
+                  <span class="mrt-pill mrt-dtl text-[10px]">DTL 藍線</span>
+                  <span class="font-mono text-[10.5px] text-slate-700">Bugis [EW12/DT14] Exit E/B</span>
+                </div>
+              </td>
               <td class="py-4 px-4 sm:px-6 font-medium text-slate-900">
                 入住 Andaz、蘇丹回教堂、哈芝巷潮流壁畫、Andaz 25F 高空無邊際泳池、<b>39F Mr. Stork 露天帳篷酒吧 ＋ Atlas Bar</b>
               </td>
@@ -357,7 +631,13 @@
               <td class="py-4 px-4 sm:px-6 font-bold text-slate-900">
                 Day 6 (9/18 五)<br><span class="text-xs text-slate-500 font-normal">中午離境</span>
               </td>
-              <td class="py-4 px-4 sm:px-6">武吉士 ➔ 樟宜機場</td>
+              <td class="py-4 px-4 sm:px-6">
+                <div class="font-semibold text-slate-900">武吉士 ➔ 樟宜機場</div>
+                <div class="flex flex-wrap items-center gap-1 mt-1.5">
+                  <span class="mrt-pill mrt-ewl text-[10px]">EWL 綠線</span>
+                  <span class="font-mono text-[10.5px] text-slate-700">EW12 ➔ EW4 ➔ CG2</span>
+                </div>
+              </td>
               <td class="py-4 px-4 sm:px-6">Andaz 25F 晨光奢華早餐、悠閒退房、樟宜機場免稅旗艦店伴手禮採買、中午啟航返程</td>
               <td class="py-4 px-4 sm:px-6 font-medium text-rose-700">Andaz 慢活早餐、Bacha 奢華咖啡、Bengawan Solo 斑蘭綠蛋糕</td>
               <td class="py-4 px-4 sm:px-6 font-semibold text-slate-400">溫暖的家</td>
@@ -432,9 +712,30 @@
                 <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
                   抵達樟宜機場完成自動通關後，行李可隨推車推行，直接走連通道進入星耀樟宜。直奔中心欣賞 40 米高的世界最高室內瀑布<strong>「資生堂森林谷・雨漩渦 (Rain Vortex)」</strong>，環繞熱帶綠樹，水氣氤氳極具震撼！
                 </p>
-                <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 text-xs text-slate-600 space-y-1 mb-3">
-                  <div><strong>👀 外觀特徵：</strong>機場中央巨大圓頂玻璃建築，瀑布就在商場中庭，沿各樓層扶梯皆有觀景台。</div>
-                  <div><strong>🍰 順路必吃：</strong>B2 購買 Bengawan Solo 斑蘭綠蛋糕或先吃片娘惹糕。</div>
+                <!-- 🚏 交通路線與現場英文招牌對照 -->
+                <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                  <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                    <span class="font-bold text-teal-300">🚇 地鐵路線：</span>
+                    <span class="mrt-pill mrt-ewl">EWL 綠線支線</span> <span class="font-mono font-bold text-emerald-300">Changi Airport [CG2]</span> <span class="text-slate-400 text-[10px]">（往市區於 Tanah Merah [EW4] 同月台跨線轉乘）</span>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                    <div>
+                      <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                      <span class="text-slate-200">抵達 T1 入境大廳 1F/2F 步行室內連通道 2 分鐘直通；T2/T3 經 2F 人行天橋 (Link Bridge) 步行約 5-8 分鐘或搭 Skytrain 免費穿梭電車直達。</span>
+                    </div>
+                    <div>
+                      <span class="text-amber-300 font-bold">🪧 街道綠牌核對：</span>
+                      <span class="sg-street-sign text-[10px]">AIRPORT BLVD</span>
+                    </div>
+                  </div>
+                  <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                    <span class="text-teal-300 font-bold mr-1">🏬 現場英文招牌對照：</span>
+                    <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">JEWEL CHANGI AIRPORT</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-teal-300">HSBC Rain Vortex</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Shiseido Forest Valley</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Bengawan Solo (#B2-262)</span>
+                  </div>
+                  <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                    <span class="text-teal-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                    <span>機場中央巨大圓頂玻璃建築，40 米世界最高室內瀑布就在中庭，抬頭跟隨 "Rain Vortex" 指標絕不走錯；B2 必買 Bengawan Solo 綠蛋糕。</span>
+                  </div>
                 </div>
               </div>
               <div class="flex flex-wrap gap-2 text-xs">
@@ -472,9 +773,30 @@
                 <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
                   自 KINN Studios 步行 5 分鐘進入牛車水。參觀雄偉唐代風格建築<strong>佛牙寺龍華院</strong>；隨後漫步至新加坡最古老的印度教寺廟<strong>馬里安曼廟</strong>，欣賞門樓上百尊生動的神祇浮雕。途中必吃<strong>「東興糕餅」</strong>剛出爐的酥脆招牌菱形蛋撻！
                 </p>
-                <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 text-xs text-slate-600 space-y-1 mb-3">
-                  <div><strong>👀 外觀特徵：</strong>佛牙寺是整座紅柱金瓦高樓；馬里安曼廟為五層彩色神像尖塔門樓，進廟需脫鞋。</div>
-                  <div><strong>🥟 下午茶點心：</strong>順路造訪橋南路 285 號「東興傳統餅家」，品嚐招牌香酥菱形蛋撻。</div>
+                <!-- 🚏 交通路線與現場英文招牌對照 -->
+                <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                  <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                    <span class="font-bold text-teal-300">🚇 地鐵路線：</span>
+                    <span class="mrt-pill mrt-tel">TEL 棕線</span> <span class="font-mono font-bold text-stone-300">Maxwell [TE18] Exit 1</span> 或 <span class="mrt-pill mrt-dtl">DTL 藍線</span> <span class="mrt-pill mrt-nel">NEL 紫線</span> <span class="font-mono font-bold text-blue-300">Chinatown [DT19/NE4] Exit A</span>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                    <div>
+                      <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                      <span class="text-slate-200">Maxwell [TE18] Exit 1 抬頭指標 "South Bridge Road / Buddha Tooth Relic Temple"，出站即見佛牙寺；Chinatown [DT19/NE4] Exit A 抬頭指標 "Pagoda Street"，出站即為寶塔街徒步區。</span>
+                    </div>
+                    <div>
+                      <span class="text-amber-300 font-bold">🪧 街道綠牌核對：</span>
+                      <span class="sg-street-sign text-[10px]">SOUTH BRIDGE RD</span> <span class="sg-street-sign text-[10px]">PAGODA ST</span> <span class="sg-street-sign text-[10px]">TEMPLE ST</span>
+                    </div>
+                  </div>
+                  <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                    <span class="text-teal-300 font-bold mr-1">🏬 現場英文招牌對照：</span>
+                    <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Buddha Tooth Relic Temple (288 South Bridge Rd)</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Sri Mariamman Temple (244 South Bridge Rd)</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-amber-300 font-bold">Tong Heng Delicacies (285 South Bridge Rd)</span>
+                  </div>
+                  <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                    <span class="text-teal-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                    <span>佛牙寺為紅柱金瓦唐代宮殿大樓；馬里安曼廟為五層彩色神像尖塔門樓（進廟需脫鞋）；東興蛋撻位於佛牙寺正對街橋南路 285 號。</span>
+                  </div>
                 </div>
               </div>
               <div class="flex flex-wrap gap-2 text-xs">
@@ -505,10 +827,30 @@
                 <p class="text-xs sm:text-sm text-slate-700 mb-3 leading-relaxed">
                   新加坡無形文化遺產之光！排隊品嚐<strong>「天天海南雞飯」</strong>，皮凍滑嫩無比，米飯吸滿雞湯斑蘭香。若天天排隊太長，隔壁由天天原主廚開設的<strong>「阿仔海南雞飯」</strong>水準同樣頂尖，再搭碗「真真粥品」與老伴豆花。
                 </p>
-                <div class="bg-white p-3 rounded-lg border border-rose-200 text-xs text-slate-700 space-y-1 mb-3">
-                  <div><strong>📍 確切攤位號：</strong>天天海南雞飯為 <strong>第 10 & 11 號攤位</strong>（認明藍底白字大招牌）。</div>
-                  <div><strong>🚇 最近捷運出口：</strong><strong>MRT Maxwell (麥士威站，湯東線) Exit 2</strong>，出站過斑馬線就是熟食中心大門。</div>
-                  <div><strong>💡 內行佔座訣竅：</strong>熟食中心落實 Chope 文化，點餐前請先在空桌上放一包面紙或隨身傘代表佔位！</div>
+                <!-- 🚏 交通路線與現場英文招牌對照 -->
+                <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                  <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                    <span class="font-bold text-teal-300">🚇 地鐵路線：</span>
+                    <span class="mrt-pill mrt-tel">TEL 湯東線 (棕線)</span> <span class="font-mono font-bold text-stone-300">Maxwell [TE18] Exit 2</span>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                    <div>
+                      <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                      <span class="text-slate-200">出站閘門上方燈箱跟隨指標 "Kadayanallur Street / Maxwell Food Centre"，手扶梯直上地面，正前方斑馬線對面即是熟食中心入口。</span>
+                    </div>
+                    <div>
+                      <span class="text-amber-300 font-bold">🪧 街道綠牌核對：</span>
+                      <span class="sg-street-sign text-[10px]">KADAYANALLUR ST</span> <span class="sg-street-sign text-[10px]">SOUTH BRIDGE RD</span>
+                    </div>
+                  </div>
+                  <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                    <span class="text-teal-300 font-bold mr-1">🏬 現場英文招牌對照：</span>
+                    <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">MAXWELL FOOD CENTRE</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-rose-300 font-bold">Tian Tian Hainanese Chicken Rice (#01-10 & #01-11)</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Ah Tai Chicken Rice (#01-07)</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Zhen Zhen Porridge (#01-54)</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Lao Ban Soya Beancurd (#01-91)</span>
+                  </div>
+                  <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                    <span class="text-teal-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                    <span>天天雞飯認明藍底白字大招牌與 #01-10/11 號；若排隊太長可買隔壁天天前主廚開的 #01-07 阿仔雞飯；落實 Chope 佔座文化（先在空桌放面紙包佔位）。</span>
+                  </div>
                 </div>
               </div>
               <div class="flex flex-wrap gap-2 text-xs">
@@ -539,9 +881,30 @@
                 <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
                   每晚 7 點，老巴剎旁的文泰街全面封街，擺滿木矮桌，煙霧炭香繚繞。鎖定最熱門的<strong>第 7 & 8 號攤位</strong>，點綜合沙爹拼盤（雞肉、牛肉、烤大蝦），蘸上香濃顆粒花生醬，配杯冰 Tiger 啤酒，感受最熱鬧的市集夜生活。
                 </p>
-                <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 text-xs text-slate-600 space-y-1 mb-3">
-                  <div><strong>👀 外觀特徵：</strong>老巴剎本身是英國維多利亞時代的八角鑄鐵古典鐘樓，沙爹街就位於面向海灣舫方向的露天馬路上。</div>
-                  <div><strong>🚇 最近捷運出口：</strong><strong>MRT Telok Ayer (直落亞逸站) Exit A</strong> 或 <strong>MRT Downtown Exit E</strong> 步行 3 分鐘。</div>
+                <!-- 🚏 交通路線與現場英文招牌對照 -->
+                <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                  <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                    <span class="font-bold text-teal-300">🚇 地鐵路線：</span>
+                    <span class="mrt-pill mrt-dtl">DTL 藍線</span> <span class="font-mono font-bold text-blue-300">Telok Ayer [DT18] Exit A</span> 或 <span class="mrt-pill mrt-tel">TEL 棕線</span> <span class="font-mono font-bold text-stone-300">Shenton Way [TE19] Exit 6</span> 或 <span class="mrt-pill mrt-dtl">DTL 藍線</span> <span class="font-mono font-bold text-blue-300">Downtown [DT17] Exit E</span>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                    <div>
+                      <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                      <span class="text-slate-200">Telok Ayer Exit A 沿 Cross St 直行 3 分；Shenton Way Exit 6 步行 2 分直達。站內指標跟隨 "Lau Pa Sat / Raffles Quay"。</span>
+                    </div>
+                    <div>
+                      <span class="text-amber-300 font-bold">🪧 街道綠牌核對：</span>
+                      <span class="sg-street-sign text-[10px]">BOON TAT ST</span> <span class="sg-street-sign text-[10px]">RAFFLES QUAY</span> <span class="sg-street-sign text-[10px]">CROSS ST</span>
+                    </div>
+                  </div>
+                  <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                    <span class="text-teal-300 font-bold mr-1">🏬 現場英文招牌對照：</span>
+                    <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">LAU PA SAT (Festival Market)</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-amber-300 font-bold">Boon Tat Street Satay: Best Satay No. 7 & 8</span>
+                  </div>
+                  <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                    <span class="text-teal-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                    <span>老巴剎本身為 1894 年維多利亞時代八角鑄鐵古典鐘樓；每晚 19:00 文達街封街擺滿桌椅，直接認明穿紅色工作服的 7&8 號攤位點烤串拼盤搭冰啤酒。</span>
+                  </div>
                 </div>
               </div>
               <div class="flex flex-wrap gap-2 text-xs">
@@ -592,9 +955,30 @@
                 <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
                   創立於 1939 年！就在 KINN Studios 門口右轉走 1 分鐘（恭錫路 35 號）。招牌<strong>「超脆焦烤咖椰吐司」</strong>將麵包烘烤至薄如餅乾，夾入自製綠色香蘭咖椰醬與厚切冰奶油，沾著生抽胡椒半熟蛋吃，再配熱騰騰 Kopi-O，充電滿格！
                 </p>
-                <div class="bg-amber-50 p-3 rounded-lg border border-amber-100 text-xs text-slate-700 space-y-1 mb-3">
-                  <div><strong>👀 外觀特徵：</strong>恭錫路 35 號騎樓，認明紅色帆布雨棚與黃色中英招牌「東亞餐室」。</div>
-                  <div><strong>☕ 內行必點：</strong>Crispy Thin Toast (超脆薄片) ＋ 兩顆養生蛋 (Soft Boiled Eggs) ＋ Kopi-O (無奶黑咖啡)。</div>
+                <!-- 🚏 交通路線與現場英文招牌對照 -->
+                <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                  <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                    <span class="font-bold text-teal-300">🚇 地鐵路線：</span>
+                    <span class="mrt-pill mrt-ewl">EWL 綠線</span> <span class="mrt-pill mrt-nel">NEL 紫線</span> <span class="mrt-pill mrt-tel">TEL 棕線</span> <span class="font-mono font-bold text-slate-300">Outram Park [EW16/NE3/TE17] Exit 4</span> <span class="text-slate-400 text-[10px]">（自 KINN Studios 下樓出門右轉步行 1 分鐘，約 80 公尺）</span>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                    <div>
+                      <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                      <span class="text-slate-200">出站指標跟隨 "Keong Saik Road"，沿新橋路右轉進恭錫路直行 150 公尺；住宿 KINN Studios 則下樓直接右轉即達。</span>
+                    </div>
+                    <div>
+                      <span class="text-amber-300 font-bold">🪧 街道綠牌核對：</span>
+                      <span class="sg-street-sign text-[10px]">KEONG SAIK RD</span>
+                    </div>
+                  </div>
+                  <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                    <span class="text-teal-300 font-bold mr-1">🏬 現場英文招牌對照：</span>
+                    <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-amber-300 font-bold">TONG AH EATING HOUSE (35 Keong Saik Rd)</span>
+                  </div>
+                  <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                    <span class="text-teal-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                    <span>恭錫路 35 號騎樓，認明紅色帆布遮雨棚與「東亞餐室」黃底招牌；內行必點 Crispy Thin Toast (超脆薄片咖椰吐司) ＋ 兩顆半熟蛋 (Soft Boiled Eggs) ＋ Kopi-O。</span>
+                  </div>
                 </div>
               </div>
               <div class="flex flex-wrap gap-2 text-xs">
@@ -625,9 +1009,30 @@
                 <p class="text-xs sm:text-sm text-slate-700 mb-3 leading-relaxed">
                   週一入園大幅減少排隊時間！必玩變形金剛 3D、古埃及全黑室內木乃伊過山車、太空堡壘雙軌懸吊飛車、全新小小兵主題樂園 (Minion Land) 與侏羅紀河流探險。
                 </p>
-                <div class="bg-white p-3 rounded-lg border border-amber-200 text-xs text-slate-700 space-y-1 mb-3">
-                  <div><strong>👀 外觀特徵：</strong>名勝世界門口巨大的旋轉「UNIVERSAL」地球噴泉與拱門入口。</div>
-                  <div><strong>🚇 交通方式：</strong>自飯店出發至 Outram Park 站搭紫線 1 站到 HarbourFront (港灣站)，在 VivoCity 3 樓轉聖淘沙捷運至名勝世界站 (Resorts World)。</div>
+                <!-- 🚏 交通路線與現場英文招牌對照 -->
+                <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                  <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                    <span class="font-bold text-teal-300">🚇 地鐵路線：</span>
+                    <span class="mrt-pill mrt-nel">NEL 紫線</span> <span class="mrt-pill mrt-ccl">CCL 橘黃線</span> <span class="font-mono font-bold text-purple-300">HarbourFront [NE1/CC29] Exit E</span> ➔ <span class="mrt-pill mrt-sentosa">Sentosa Express 單軌</span> ➔ <span class="font-mono font-bold text-amber-300">Resorts World Station (名勝世界站)</span>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                    <div>
+                      <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                      <span class="text-slate-200">HarbourFront 站 Exit E 進入商場 VivoCity (怡豐城)，搭手扶梯直上 3 樓 (Level 3, Lobby L) 轉乘聖淘沙單軌列車，搭乘 1 站於名勝世界站下車即達。</span>
+                    </div>
+                    <div>
+                      <span class="text-amber-300 font-bold">🪧 街道綠牌核對：</span>
+                      <span class="sg-street-sign text-[10px]">GATEWAY AVE</span> <span class="sg-street-sign text-[10px]">SENTOSA GATEWAY</span>
+                    </div>
+                  </div>
+                  <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                    <span class="text-teal-300 font-bold mr-1">🏬 現場英文招牌對照：</span>
+                    <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">RESORTS WORLD SENTOSA</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-amber-300 font-bold">UNIVERSAL STUDIOS SINGAPORE</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Transformers 3D</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Revenge of the Mummy</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Battlestar Galactica</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-amber-300 font-bold">Minion Land</span>
+                  </div>
+                  <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                    <span class="text-teal-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                    <span>名勝世界門口有巨大旋轉 UNIVERSAL 地球噴泉；週一入園人潮少 50%，優先逆時針直奔變形金剛 (Sci-Fi City) ➔ 木乃伊 (Ancient Egypt) ➔ 小小兵 (Minion Land)。</span>
+                  </div>
                 </div>
               </div>
               <div class="flex flex-wrap items-center justify-between gap-2 pt-2 text-xs">
@@ -660,8 +1065,30 @@
                 <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
                   離開影城後搭乘免費海灘輕軌前往西樂索海灘。夕陽灑在白色沙灘與椰林上，在海灘酒吧坐下吹海風小憩。晚間搭捷運返回恭錫路飯店旁，享用米其林必比登「國成球記餐室 (Kok Sen)」大蝦大碌麵與自製釀豆腐！
                 </p>
-                <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 text-xs text-slate-600 space-y-1 mb-3">
-                  <div><strong>👀 外觀特徵：</strong>西樂索海灘有巨大彩繪「SILOSO」字母地標；國成球記位於恭錫路 2-4 號轉角。</div>
+                                <!-- 🚏 交通路線與現場英文招牌對照 -->
+                <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                  <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                    <span class="font-bold text-teal-300">🚇 地鐵路線：</span>
+                    <span class="mrt-pill mrt-sentosa">Sentosa Express 單軌</span> 終點站 <span class="font-mono font-bold text-amber-300">Beach Station (海灘站)</span> ➔ 免費 <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Beach Tram</span> ➔ 回程 HarbourFront 轉紫線至 <span class="mrt-pill mrt-ewl">EWL</span>/<span class="mrt-pill mrt-nel">NEL</span>/<span class="mrt-pill mrt-tel">TEL</span> <span class="font-mono font-bold text-slate-300">Outram Park Exit 4</span>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                    <div>
+                      <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                      <span class="text-slate-200">Beach Station 出站轉乘免費開放式輕軌電車 Sentosa Beach Tram (Siloso Route) 至 Siloso Beach 或 Coastes；回市區由 Outram Park Exit 4 步行 4 分鐘回恭錫路。</span>
+                    </div>
+                    <div>
+                      <span class="text-amber-300 font-bold">🪧 街道綠牌核對：</span>
+                      <span class="sg-street-sign text-[10px]">SILOSO BEACH WALK</span> <span class="sg-street-sign text-[10px]">KEONG SAIK RD</span>
+                    </div>
+                  </div>
+                  <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                    <span class="text-teal-300 font-bold mr-1">🏬 現場英文招牌對照：</span>
+                    <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">SILOSO BEACH</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Coastes</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-rose-300 font-bold">KOK SEN RESTAURANT (2-4 Keong Saik Rd)</span>
+                  </div>
+                  <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                    <span class="text-teal-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                    <span>海灘中央有白色巨大 "SILOSO" 字母裝置雕塑，夕陽極美；晚餐國成球記位於恭錫路 2-4 號，必點 Big Prawn Crispy Noodles (大蝦煎生麵) 與砂煲釀豆腐。</span>
+                  </div>
                 </div>
               </div>
               <div class="flex flex-wrap gap-2 text-xs">
@@ -719,10 +1146,32 @@
                 <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
                   清晨涼爽時造訪新加坡國寶<strong>魚尾獅公園</strong>，正對金沙三塔拍攝借位喝發財水趣味照；隨後沿新加坡河畔漫步至<strong>舊禧街警察局</strong>，打卡 927 扇彩虹漸層百葉窗。
                 </p>
-                <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 text-xs text-slate-600 space-y-1 mb-3">
-                  <div><strong>👀 外觀特徵：</strong>魚尾獅位於富麗敦酒店前方水畔；舊禧街警察局位於禧街與河畔轉角，整棟大樓五顏六色百葉窗極為奪目。</div>
-                  <div><strong>🚇 最近捷運出口：</strong>魚尾獅近 <strong>MRT Raffles Place (萊佛士坊站) Exit H</strong>；彩虹警局近 <strong>MRT Clarke Quay Exit E</strong>。</div>
+                                <!-- 🚏 交通路線與現場英文招牌對照 -->
+                <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                  <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                    <span class="font-bold text-teal-300">🚇 地鐵路線：</span>
+                    魚尾獅近 <span class="mrt-pill mrt-nsl">NSL 紅線</span> <span class="mrt-pill mrt-ewl">EWL 綠線</span> <span class="font-mono font-bold text-rose-300">Raffles Place [NS26/EW14] Exit H</span>；彩虹警局近 <span class="mrt-pill mrt-nel">NEL 紫線</span> <span class="font-mono font-bold text-purple-300">Clarke Quay [NE5] Exit E</span>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                    <div>
+                      <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                      <span class="text-slate-200">Raffles Place Exit H 指標跟隨 "Fullerton Hotel / One Fullerton"，穿越地下人行步道即達魚尾獅；隨後沿新加坡河畔林蔭步道漫步 12 分鐘抵達舊禧街彩虹警局。</span>
+                    </div>
+                    <div>
+                      <span class="text-amber-300 font-bold">🪧 街道綠牌核對：</span>
+                      <span class="sg-street-sign text-[10px]">FULLERTON RD</span> <span class="sg-street-sign text-[10px]">HILL ST</span> <span class="sg-street-sign text-[10px]">NEW BRIDGE RD</span>
+                    </div>
+                  </div>
+                  <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                    <span class="text-teal-300 font-bold mr-1">🏬 現場英文招牌對照：</span>
+                    <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">MERLION PARK (One Fullerton)</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-teal-300 font-bold">OLD HILL STREET POLICE STATION (140 Hill St)</span>
+                  </div>
+                  <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                    <span class="text-teal-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                    <span>魚尾獅正對金沙三塔；舊禧街警察局現為新聞及藝術部大樓，共有 927 扇彩虹漸層百葉窗，路口過馬路拍全景最壯觀。</span>
+                  </div>
                 </div>
+
               </div>
               <div class="flex flex-wrap gap-2 text-xs">
                 <span class="px-2.5 py-0.5 rounded bg-slate-100 text-slate-700">經典拍照打卡</span>
@@ -752,10 +1201,32 @@
                 <p class="text-xs sm:text-sm text-slate-700 mb-3 leading-relaxed">
                   米其林必比登推薦！招牌<strong>「特級龍骨肉骨茶」</strong>，湯頭清澄甘辛，滿滿白胡椒與蒜頭醇厚香氣，肉質軟嫩脫骨。服務員會隨時提著金屬茶壺為您<strong>免費無限續加熱湯</strong>！必點老油條沾湯、滷鳳爪與豆皮。
                 </p>
-                <div class="bg-white p-3 rounded-lg border border-rose-200 text-xs text-slate-700 space-y-1 mb-3">
-                  <div><strong>👀 外觀特徵：</strong>新橋路 11 號，店門口保留 1960 年代傳統流動小販手推車造景。</div>
-                  <div><strong>🚇 最近捷運出口：</strong><strong>MRT Clarke Quay (克拉碼頭站) Exit E</strong>，一出站過馬路即達。</div>
+                                <!-- 🚏 交通路線與現場英文招牌對照 -->
+                <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                  <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                    <span class="font-bold text-teal-300">🚇 地鐵路線：</span>
+                    <span class="mrt-pill mrt-nel">NEL 東北線 (紫線)</span> <span class="font-mono font-bold text-purple-300">Clarke Quay [NE5] Exit E</span>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                    <div>
+                      <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                      <span class="text-slate-200">出站指標抬頭尋找 "New Bridge Road / Upper Circular Road"，手扶梯直達地面，正前方斑馬線對面即為新橋路 11 號總店。</span>
+                    </div>
+                    <div>
+                      <span class="text-amber-300 font-bold">🪧 街道綠牌核對：</span>
+                      <span class="sg-street-sign text-[10px]">NEW BRIDGE RD</span> <span class="sg-street-sign text-[10px]">UPPER CIRCULAR RD</span>
+                    </div>
+                  </div>
+                  <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                    <span class="text-teal-300 font-bold mr-1">🏬 現場英文招牌對照：</span>
+                    <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-rose-300 font-bold">SONG FA BAK KUT TEH (11 New Bridge Rd, #01-01)</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-amber-300">Pork Ribs Soup</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Braised Pork Belly</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Dough Fritters</span>
+                  </div>
+                  <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                    <span class="text-teal-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                    <span>總店門口有復古阿嬤推車攤位模型與排隊紅龍；必點 Pork Ribs Soup (特級排骨肉骨茶)，店員手持銅壺隨時提供免費白胡椒熱高湯無限續加！</span>
+                  </div>
                 </div>
+
               </div>
               <div class="flex flex-wrap gap-2 text-xs">
                 <span class="px-2.5 py-0.5 rounded bg-rose-100 text-rose-800 font-bold">新橋路 11 號總店</span>
@@ -785,10 +1256,33 @@
                 <p class="text-xs sm:text-sm text-slate-700 mb-3 leading-relaxed">
                   午後最炎熱時段進入恆溫 23-25°C 的雙玻璃冷室避暑！<strong>雲霧林 (Cloud Forest)</strong> 迎面就是 35 米人造巨瀑，走在懸空步道宛如置身仙境；<strong>花穹 (Flower Dome)</strong> 則是世界最大無柱溫室，展示世界奇花異草。
                 </p>
-                <div class="bg-white p-3 rounded-lg border border-emerald-200 text-xs text-slate-700 space-y-1 mb-3">
-                  <div><strong>👀 外觀特徵：</strong>濱海灣畔兩座巨型水滴貝殼狀玻璃穹頂。</div>
-                  <div><strong>🚇 最近捷運出口：</strong><strong>MRT Gardens by the Bay (濱海灣花園站，湯東線) Exit 1</strong> 或 <strong>MRT Bayfront (海灣舫站) Exit B</strong> 走地下通道。</div>
-                  <div><strong>🎉 2026 節慶亮點：</strong>9/12 - 9/27 恰逢濱海灣中秋燈會，戶外有巨型花燈展覽，晚間漫步氣氛絕佳！</div>
+                <!-- 🚏 交通路線與現場英文招牌對照 -->
+                <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                  <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                    <span class="font-bold text-teal-300">🚇 地鐵路線：</span>
+                    <span class="mrt-pill mrt-tel">TEL 棕線</span> <span class="font-mono font-bold text-stone-300">Gardens by the Bay [TE22] Exit 1</span> (最快捷徑直達) 或 <span class="mrt-pill mrt-dtl">DTL 藍線</span> <span class="mrt-pill mrt-ccl">CCL 橘黃線</span> <span class="font-mono font-bold text-blue-300">Bayfront [DT16/CE1] Exit B</span>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                    <div>
+                      <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                      <span class="text-slate-200">TEL 棕線 Exit 1 指標跟隨 "Gardens by the Bay / Conservatories"，出站步行 3 分鐘直通雙冷室南門；Bayfront Exit B 經地下通道穿過蜻蜓橋步行 8-10 分鐘進入。</span>
+                    </div>
+                    <div>
+                      <span class="text-amber-300 font-bold">🪧 街道綠牌核對：</span>
+                      <span class="sg-street-sign text-[10px]">MARINA GARDENS DR</span>
+                    </div>
+                  </div>
+                  <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                    <span class="text-teal-300 font-bold mr-1">🏬 現場英文招牌對照：</span>
+                    <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">GARDENS BY THE BAY</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-teal-300 font-bold">FLOWER DOME (花穹)</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-teal-300 font-bold">CLOUD FOREST (雲霧林)</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Supertree Grove</span>
+                  </div>
+                  <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                    <span class="text-teal-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                    <span>兩座冷室為巨大貝殼造型全玻璃溫室；花穹九大花園四季繁花，雲霧林擁 35 米世界最大室內瀑布；進館直接在閘門刷手機電子票快速入館。</span>
+                  </div>
+                </div>
+                <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100 text-xs text-slate-600 mb-3">
+                  <strong>🎉 2026 節慶亮點：</strong>9/12 - 9/27 恰逢濱海灣中秋燈會，戶外有巨型花燈展覽，晚間漫步氣氛絕佳！
                 </div>
               </div>
               <div class="flex flex-wrap items-center justify-between gap-2 pt-2 text-xs">
@@ -830,8 +1324,30 @@
                   • <strong>21:00 金沙水舞秀 (Spectra)：</strong>步行穿過金沙購物中心戶外活動廣場，欣賞雷射噴泉震撼秀。<br>
                   • <strong>21:30 新加坡河遊船 (River Cruise)：</strong>自金沙或克拉碼頭搭乘傳統木船，在涼風中夜遊 40 分鐘，飽覽兩岸萬家燈火！
                 </p>
-                <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 text-xs text-slate-600 space-y-1 mb-3">
-                  <div><strong>👀 觀看位置：</strong>擎天樹秀在超級樹樹幹下中央草坪；水舞秀在金沙商場戶外活動廣場 (Event Plaza)。</div>
+                <!-- 🚏 交通路線與現場英文招牌對照 -->
+                <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                  <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                    <span class="font-bold text-teal-300">🚇 地鐵路線：</span>
+                    <span class="mrt-pill mrt-dtl">DTL 藍線</span> <span class="mrt-pill mrt-ccl">CCL 橘黃線</span> <span class="font-mono font-bold text-blue-300">Bayfront [DT16/CE1] Exit D</span> (金沙商場) ➔ <span class="mrt-pill mrt-nel">NEL 紫線</span> <span class="font-mono font-bold text-purple-300">Clarke Quay [NE5] Exit C/G</span> (遊船碼頭)
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                    <div>
+                      <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                      <span class="text-slate-200">擎天樹看完後沿天橋進入金沙商場 The Shoppes；水舞秀在面向海灣的戶外平台 Event Plaza；遊船於 Clarke Quay Exit C/G 步行至河畔碼頭。</span>
+                    </div>
+                    <div>
+                      <span class="text-amber-300 font-bold">🪧 街道綠牌核對：</span>
+                      <span class="sg-street-sign text-[10px]">BAYFRONT AVE</span> <span class="sg-street-sign text-[10px]">CLARKE QUAY</span>
+                    </div>
+                  </div>
+                  <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                    <span class="text-teal-300 font-bold mr-1">🏬 現場英文招牌對照：</span>
+                    <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-amber-300">Garden Rhapsody (19:45/20:45)</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">The Shoppes at Marina Bay Sands</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-teal-300">Spectra - Light & Water Show (20:00/21:00)</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Singapore River Cruise (Clarke Quay Jetty)</span>
+                  </div>
+                  <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                    <span class="text-teal-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                    <span>擎天樹秀需在樹下找空地仰望；金沙水舞秀在 Event Plaza 木棧階梯平台（正對 LV 旗艦店前海面）；遊船售票亭在克拉碼頭綠頂白身小木屋。</span>
+                  </div>
                 </div>
               </div>
               <div class="flex flex-wrap gap-2 text-xs">
@@ -890,8 +1406,30 @@
                 <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
                   上午走訪小印度拍<strong>陳東齡故居</strong>與竹腳中心印度甩餅拉茶；午後前往土生華人歷史區<strong>加東如切</strong>，漫步坤成路粉彩騎樓店屋。午餐品嚐濃郁椰香的米其林<strong>「328加東叻沙」</strong>，餐後享受 Birds of Paradise 白菊花冰淇淋。
                 </p>
-                <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 text-xs text-slate-600 space-y-1 mb-3">
-                  <div><strong>👀 外觀特徵：</strong>坤成路粉色排屋正對安靜住宅街；328 加東叻沙為東海岸路 51 號大紅黃招牌。</div>
+                <!-- 🚏 交通路線與現場英文招牌對照 -->
+                <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                  <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                    <span class="font-bold text-teal-300">🚇 地鐵路線：</span>
+                    小印度：<span class="mrt-pill mrt-dtl">DTL 藍線</span> <span class="mrt-pill mrt-nel">NEL 紫線</span> <span class="font-mono font-bold text-blue-300">Little India [DT12/NE7] Exit E</span> ｜ 加東：<span class="mrt-pill mrt-tel">TEL 棕線</span> <span class="font-mono font-bold text-stone-300">Marine Parade [TE26] Exit 1</span> (2024全新開通，步行 8 分) 或搭 Grab 直達 Koon Seng Rd
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                    <div>
+                      <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                      <span class="text-slate-200">Little India Exit E 出站即 Buffalo Rd，對面為 Tekka Centre；Marine Parade Exit 1 出站沿 Joo Chiat Rd 步行 8 分鐘達坤成路彩繪店屋。</span>
+                    </div>
+                    <div>
+                      <span class="text-amber-300 font-bold">🪧 街道綠牌核對：</span>
+                      <span class="sg-street-sign text-[10px]">KERBAU RD</span> <span class="sg-street-sign text-[10px]">BUFFALO RD</span> <span class="sg-street-sign text-[10px]">KOON SENG RD</span> <span class="sg-street-sign text-[10px]">EAST COAST RD</span>
+                    </div>
+                  </div>
+                  <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                    <span class="text-teal-300 font-bold mr-1">🏬 現場英文招牌對照：</span>
+                    <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">House of Tan Teng Niah (37 Kerbau Rd)</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Tekka Centre</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Peranakan Shophouses (Koon Seng Rd)</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-rose-300 font-bold">328 Katong Laksa (51 East Coast Rd)</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Birds of Paradise (63 East Coast Rd)</span>
+                  </div>
+                  <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                    <span class="text-teal-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                    <span>陳東齡故居外觀為五彩斑斕兩層洋樓；坤成路兩側為粉藍、粉紅、粉黃雕花店屋；328 叻沙在東海岸路 51 號大紅黃招牌，只附湯匙。</span>
+                  </div>
                 </div>
               </div>
               <div class="flex flex-wrap gap-2 text-xs">
@@ -922,9 +1460,30 @@
                 <p class="text-xs sm:text-sm text-slate-700 mb-3 leading-relaxed">
                   前往夜間動物園前的國寶盛宴！碩大活青蟹裹滿番茄辣椒蛋花酸甜濃郁醬汁，<strong>炸黃金小饅頭蘸滿醬汁</strong>酥軟可口，配香甜麥片蝦，飽餐一頓儲備滿滿體力迎接夜間叢林探險！
                 </p>
-                <div class="bg-white p-3 rounded-lg border border-rose-200 text-xs text-slate-700 space-y-1 mb-3">
-                  <div><strong>📍 確切位置：</strong>30 Merchant Road, #01-01/02 Riverside Point（克拉碼頭河岸長廊）。</div>
-                  <div><strong>🚗 交通安排：</strong>18:45 用餐完畢後直接於門口叫 Grab 計程車（車程約 25 分鐘直抵夜間動物園）。</div>
+                                <!-- 🚏 交通路線與現場英文招牌對照 -->
+                <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                  <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                    <span class="font-bold text-teal-300">🚇 地鐵路線：</span>
+                    <span class="mrt-pill mrt-nel">NEL 東北線 (紫線)</span> <span class="font-mono font-bold text-purple-300">Clarke Quay [NE5] Exit B 或 Exit G</span>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                    <div>
+                      <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                      <span class="text-slate-200">河濱坊店 (Riverside Point) 由 Exit B 過 Read Bridge 步行 2 分；河畔中心店 (The Riverwalk) 由 Exit G 步行 2 分直達。</span>
+                    </div>
+                    <div>
+                      <span class="text-amber-300 font-bold">🪧 街道綠牌核對：</span>
+                      <span class="sg-street-sign text-[10px]">MERCHANT RD</span> <span class="sg-street-sign text-[10px]">UPPER CIRCULAR RD</span>
+                    </div>
+                  </div>
+                  <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                    <span class="text-teal-300 font-bold mr-1">🏬 現場英文招牌對照：</span>
+                    <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-rose-300 font-bold">JUMBO SEAFOOD (Riverside Point / The Riverwalk)</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-amber-300">Award-Winning Chilli Crab</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Deep Fried Mini Buns</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Crispy Baby Squid</span>
+                  </div>
+                  <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                    <span class="text-teal-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                    <span>認明水畔橘色大螃蟹招牌；入座提供可愛螃蟹圍兜；必點獲獎辣椒螃蟹搭炸小饅頭（沾酸甜蛋花蟹汁極品），建議 17:00 入座以利 18:45 前往夜間動物園。</span>
+                  </div>
                 </div>
               </div>
               <div class="flex flex-wrap gap-2 text-xs">
@@ -958,10 +1517,30 @@
                   • <strong>夜晚的精靈表演 (Creatures of the Night Show)：</strong>精彩絕倫的夜間動物動態展示（需於入園前 2 小時至官方 App/網站劃位）。<br>
                   • <strong>四大步行小徑：</strong>花豹小徑、漁貓小徑近距離探索黑夜中的神秘動物！
                 </p>
-                <div class="bg-white p-3 rounded-lg border border-emerald-200 text-xs text-slate-700 space-y-1 mb-3">
-                  <div><strong>📍 景點地址：</strong>80 Mandai Lake Road, Singapore 729826 (萬態野生動物世界)。</div>
-                  <div><strong>👀 入口認路特徵：</strong>認明大型木質「NIGHT SAFARI」迎賓招牌與火把噴泉。</div>
-                  <div><strong>🚗 返程交通：</strong>22:30 出園直接於計程車站搭 Grab 返回 KINN Studios（約 25 分鐘）。</div>
+                <!-- 🚏 交通路線與現場英文招牌對照 -->
+                <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                  <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                    <span class="font-bold text-teal-300">🚇 地鐵路線：</span>
+                    <span class="mrt-pill mrt-nsl">NSL 南北線 (紅線)</span> <span class="font-mono font-bold text-rose-300">Khatib [NS14] Exit A</span> ➔ <span class="mrt-pill mrt-shuttle">Mandai Khatib Shuttle</span> (直達接駁車)
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                    <div>
+                      <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                      <span class="text-slate-200">Khatib 站 Exit A 出站左轉，跟隨地面綠色動物腳印地貼至巴士停靠區搭乘接駁專車（每 10-15 分鐘一班，單程車資 S$1-S$2.5，可刷卡/EZ-Link，車程僅 15 分直達）；回程於 Mandai Wildlife Reserve Coach Bay 原處搭車回 Khatib。</span>
+                    </div>
+                    <div>
+                      <span class="text-amber-300 font-bold">🪧 街道綠牌核對：</span>
+                      <span class="sg-street-sign text-[10px]">MANDAI LAKE RD</span>
+                    </div>
+                  </div>
+                  <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                    <span class="text-teal-300 font-bold mr-1">🏬 現場英文招牌對照：</span>
+                    <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-emerald-300 font-bold">MANDAI WILDLIFE RESERVE - NIGHT SAFARI</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Tram Safari Boarding</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Creatures of the Night Amphitheatre</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">East Lodge Trail</span>
+                  </div>
+                  <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                    <span class="text-teal-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                    <span>進園右手邊為免費導覽電車 (Tram Safari) 排隊區；入園前 2 小時務必上 Mandai 官網線上預約「夜晚精靈秀 (Creatures of the Night)」座位；搭電車後步行 East Lodge Trail 近距離看馬來貘與雲豹。</span>
+                  </div>
                 </div>
               </div>
               <div class="flex flex-wrap items-center justify-between gap-2 pt-2 text-xs">
@@ -1017,10 +1596,32 @@
                 <p class="text-xs sm:text-sm text-slate-700 mb-3 leading-relaxed">
                   退房換宿至 Andaz 放好行李後，步行 5 分鐘抵達 1908 年創立的百年名店！招牌<strong>羊肉/牛肉 Murtabak</strong>，多層酥皮裹滿辛香肉餡煎至金黃，蘸著濃郁魚咖哩與清甜小黃瓜，配一杯粉紅玫瑰甜奶茶 (Bandung)，極其滿足！
                 </p>
-                <div class="bg-white p-3 rounded-lg border border-rose-200 text-xs text-slate-700 space-y-1 mb-3">
-                  <div><strong>👀 認路特徵：</strong>橋北路 697 號，正正對著蘇丹清真寺的正大門！黃色雨棚、雙層復古店面。</div>
-                  <div><strong>🚇 最近捷運出口：</strong><strong>MRT Bugis (武吉士站) Exit B</strong> 步行約 6 分鐘。</div>
+                                <!-- 🚏 交通路線與現場英文招牌對照 -->
+                <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                  <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                    <span class="font-bold text-teal-300">🚇 地鐵路線：</span>
+                    <span class="mrt-pill mrt-ewl">EWL 綠線</span> <span class="mrt-pill mrt-dtl">DTL 藍線</span> <span class="font-mono font-bold text-slate-300">Bugis [EW12/DT14] Exit B</span> <span class="text-slate-400 text-[10px]">（自 Andaz 酒店步行 5 分鐘）</span>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                    <div>
+                      <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                      <span class="text-slate-200">Bugis Exit B 沿 Victoria St 直行至 Arab St 轉進，步行約 5 分鐘抵達 North Bridge Rd 轉角；Andaz 換宿放行李後下樓步行即達。</span>
+                    </div>
+                    <div>
+                      <span class="text-amber-300 font-bold">🪧 街道綠牌核對：</span>
+                      <span class="sg-street-sign text-[10px]">NORTH BRIDGE RD</span> <span class="sg-street-sign text-[10px]">ARAB ST</span>
+                    </div>
+                  </div>
+                  <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                    <span class="text-teal-300 font-bold mr-1">🏬 現場英文招牌對照：</span>
+                    <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-amber-300 font-bold">SINGAPORE ZAM ZAM (697-699 North Bridge Rd)</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Mutton Murtabak</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Beef Murtabak</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Teh Tarik</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">Sirap Bandung</span>
+                  </div>
+                  <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                    <span class="text-teal-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                    <span>黃色雨棚、雙連排復古騎樓店面，正正對著宏偉的蘇丹清真寺正門長廊；招牌羊肉煎餡餅份量大，附濃郁咖哩醬與黃瓜片。</span>
+                  </div>
                 </div>
+
               </div>
               <div class="flex flex-wrap gap-2 text-xs">
                 <span class="px-2.5 py-0.5 rounded bg-rose-100 text-rose-800 font-bold">清真百年名店</span>
@@ -1057,9 +1658,30 @@
                 <p class="text-xs sm:text-sm text-slate-600 mb-3 leading-relaxed">
                   飽覽甘榜格南阿拉伯風情！從巴梭拉街椰林步道仰望宏偉的金色洋蔥圓頂<strong>蘇丹回教堂</strong>；轉進緊鄰的<strong>哈芝巷</strong>，兩側滿佈大型潮流幾何塗鴉與獨立手作店。順道至<strong>「裕佳西餅店 (Rich & Good Cake Shop)」</strong>買條招牌斑蘭瑞士捲！
                 </p>
-                <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 text-xs text-slate-600 space-y-1 mb-3">
-                  <div><strong>👀 外觀特徵：</strong>清真寺金頂聳入雲霄；哈芝巷是狹窄行人巷道，牆壁塗滿鮮豔普普藝術。</div>
-                  <div><strong>🍰 裕佳西餅店地址：</strong>Kandahar Street 24 號（斑蘭、榴槤、咖椰瑞士捲）。</div>
+                <!-- 🚏 交通路線與現場英文招牌對照 -->
+                <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                  <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                    <span class="font-bold text-teal-300">🚇 地鐵路線：</span>
+                    <span class="mrt-pill mrt-ewl">EWL 綠線</span> <span class="mrt-pill mrt-dtl">DTL 藍線</span> <span class="font-mono font-bold text-slate-300">Bugis [EW12/DT14] Exit B</span>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                    <div>
+                      <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                      <span class="text-slate-200">出站指標跟隨 "Victoria Street / Arab Street"，沿阿拉伯街步行 5 分鐘抵達蘇丹清真寺與哈芝巷。</span>
+                    </div>
+                    <div>
+                      <span class="text-amber-300 font-bold">🪧 街道綠牌核對：</span>
+                      <span class="sg-street-sign text-[10px]">MUSCAT ST</span> <span class="sg-street-sign text-[10px]">BUSSORAH ST</span> <span class="sg-street-sign text-[10px]">HAJI LANE</span> <span class="sg-street-sign text-[10px]">ARAB ST</span> <span class="sg-street-sign text-[10px]">KANDAHAR ST</span>
+                    </div>
+                  </div>
+                  <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                    <span class="text-teal-300 font-bold mr-1">🏬 現場英文招牌對照：</span>
+                    <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">MASJID SULTAN (3 Muscat St)</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">HAJI LANE</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-emerald-300 font-bold">Rich & Good Cake Shop (24 Kandahar St)</span>
+                  </div>
+                  <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                    <span class="text-teal-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                    <span>巴梭拉街 (Bussorah St) 為椰林徒步大道直面清真寺金頂；哈芝巷緊鄰隔壁街，兩側滿佈幾何彩繪牆；必買裕佳西餅店斑蘭瑞士捲 (24 Kandahar St)。</span>
+                  </div>
                 </div>
               </div>
               <div class="flex flex-wrap gap-2 text-xs">
@@ -1092,8 +1714,30 @@
                   • <strong>19:00 Mr. Stork 高空帳篷酒吧：</strong>直搭電梯至 39 樓頂樓，坐進標誌性白色圓錐帳篷 (Teepee Hut)，手持南洋特調飽覽夕陽與萬家燈火。<br>
                   • <strong>21:30 順遊對街 Atlas Bar：</strong>自 Andaz 下樓步行僅 3 分鐘即可抵達僑福廣場的 <strong>Atlas Bar</strong>（世界 50 大酒吧），15 米挑高 Art Deco 鍍金穹頂金庫琴酒塔，超完美連線！
                 </p>
-                <div class="bg-white p-3 rounded-lg border border-amber-200 text-xs text-slate-700 space-y-1 mb-3">
-                  <div><strong>👀 實景位置：</strong>Atlas Bar 就位於 Andaz 對面的僑福廣場 (Parkview Square)，步行過馬路即達，無任何交通奔波！</div>
+                                <!-- 🚏 交通路線與現場英文招牌對照 -->
+                <div class="bg-slate-900 text-slate-100 p-3.5 sm:p-4 rounded-xl text-xs space-y-2.5 my-3 border border-slate-800 shadow-sm">
+                  <div class="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-800 text-[11px]">
+                    <span class="font-bold text-teal-300">🚇 地鐵路線：</span>
+                    <span class="mrt-pill mrt-ewl">EWL 綠線</span> <span class="mrt-pill mrt-dtl">DTL 藍線</span> <span class="font-mono font-bold text-slate-300">Bugis [EW12/DT14] Exit E</span> (地下直通 DUO)
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] leading-relaxed">
+                    <div>
+                      <span class="text-amber-300 font-bold">🚪 捷運出站與指標：</span>
+                      <span class="text-slate-200">Bugis Exit E 連通道直通 DUO Galleria B3；Atlas Bar 位於 Andaz 對街僑福廣場 (Parkview Square)，步行過馬路僅 3 分鐘。</span>
+                    </div>
+                    <div>
+                      <span class="text-amber-300 font-bold">🪧 街道綠牌核對：</span>
+                      <span class="sg-street-sign text-[10px]">FRASER ST</span> <span class="sg-street-sign text-[10px]">OPHIR RD</span> <span class="sg-street-sign text-[10px]">NORTH BRIDGE RD</span>
+                    </div>
+                  </div>
+                  <div class="pt-2 border-t border-slate-800 flex flex-wrap items-center gap-1.5 text-[11px]">
+                    <span class="text-teal-300 font-bold mr-1">🏬 現場英文招牌對照：</span>
+                    <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-slate-200">ANDAZ SINGAPORE (DUO Tower)</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-amber-300 font-bold">LEVEL 39: MR. STORK</span> <span class="font-mono bg-slate-800 px-1.5 py-0.5 rounded text-purple-300 font-bold">PARKVIEW SQUARE: ATLAS BAR (600 North Bridge Rd)</span>
+                  </div>
+                  <div class="text-[10.5px] text-slate-300 bg-slate-950/70 px-2.5 py-1.5 rounded-lg border border-slate-800/80 flex items-start gap-1.5">
+                    <span class="text-teal-400 font-bold shrink-0">🧭 現場辨識提示：</span>
+                    <span>Mr. Stork 位於 Andaz 39 樓頂樓，有十座環景白色尖頂帳篷；Atlas Bar 位於正對面黑色高譚市風格僑福廣場一樓大廳，挑高 15 米鍍金琴酒塔絕美震撼。</span>
+                  </div>
                 </div>
               </div>
               <div class="flex flex-wrap items-center justify-between gap-2 pt-2 text-xs">
@@ -1124,26 +1768,62 @@
 
         <div class="p-6 space-y-6">
           <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
-              <div class="text-xs font-bold text-amber-700 mb-1">08:00 - 09:30 晨光慢活</div>
-              <h4 class="text-sm font-bold text-slate-900 mb-1">Andaz 25F Alley on 25 早餐</h4>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                在 25 樓景觀餐廳享用主廚現煮叻沙、手作可頌與手沖南洋咖啡，悠閒回顧旅行精彩時刻。
-              </p>
+            <!-- Day 6 Spot 1: Alley on 25 -->
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 flex flex-col justify-between space-y-3">
+              <div>
+                <div class="text-xs font-bold text-amber-700 mb-1">08:00 - 09:30 晨光奢饗</div>
+                <h4 class="text-sm font-bold text-slate-900 mb-1">Andaz 25F Alley on 25 早餐</h4>
+                <p class="text-xs text-slate-600 leading-relaxed mb-2">
+                  在 25 樓景觀餐廳享用主廚現煮新加坡叻沙、手作現烤可頌與手沖南洋咖啡，飽覽市區晨景。
+                </p>
+              </div>
+              <div class="bg-slate-900 text-slate-100 p-2.5 rounded-lg text-[11px] space-y-1 border border-slate-800">
+                <div class="text-amber-300 font-bold">🏬 現場英文名牌：</div>
+                <div class="font-mono text-slate-200">ALLEY ON 25 (Level 25)</div>
+                <div class="text-[10px] text-slate-400">搭乘客房電梯直達 25 樓接待層即達餐廳。</div>
+              </div>
             </div>
-            <div class="bg-slate-50 p-4 rounded-xl border border-slate-100">
-              <div class="text-xs font-bold text-blue-700 mb-1">09:30 - 10:15 退房交通</div>
-              <h4 class="text-sm font-bold text-slate-900 mb-1">前往樟宜機場 (SIN)</h4>
-              <p class="text-xs text-slate-600 leading-relaxed">
-                飯店地下連通道直進 Bugis 站搭 MRT 綠線直通機場，或門口叫 Grab 約 18-20 分鐘直達航廈。
-              </p>
+
+            <!-- Day 6 Spot 2: SIN Airport -->
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 flex flex-col justify-between space-y-3">
+              <div>
+                <div class="text-xs font-bold text-blue-700 mb-1">09:30 - 10:15 退房交通</div>
+                <h4 class="text-sm font-bold text-slate-900 mb-1">前往樟宜機場 (SIN)</h4>
+                <p class="text-xs text-slate-600 leading-relaxed mb-2">
+                  地鐵綠線直通或 Grab 叫車，約 18-20 分鐘直達 T1/T2/T3/T4 出境大廳。
+                </p>
+              </div>
+              <div class="bg-slate-900 text-slate-100 p-2.5 rounded-lg text-[11px] space-y-1.5 border border-slate-800">
+                <div class="flex items-center gap-1.5">
+                  <span class="mrt-pill mrt-ewl text-[10px]">EWL 綠線</span>
+                  <span class="font-mono text-emerald-300 font-bold">Bugis [EW12] ➔ CG2</span>
+                </div>
+                <div class="text-[10px] text-slate-300">
+                  地鐵：Bugis 站往 Pasir Ris 方向搭至 <strong>Tanah Merah [EW4]</strong>，同月台跨線轉乘機場支線至 <strong>Changi Airport [CG2]</strong>（約 35 分）。<br>
+                  計程車/Grab：導航至 <strong>Terminal 1/2/3/4 Departure</strong>。
+                </div>
+              </div>
             </div>
-            <div class="bg-teal-50/60 p-4 rounded-xl border border-teal-100">
-              <div class="text-xs font-bold text-teal-800 mb-1">10:15 - 12:30 免稅採買</div>
-              <h4 class="text-sm font-bold text-slate-900 mb-1">最後必買伴手禮</h4>
-              <p class="text-xs text-slate-700 leading-relaxed">
-                免稅區採買 <strong>Bacha Coffee</strong> 摩洛哥奢華咖啡豆禮盒、<strong>Bengawan Solo</strong> 斑蘭戚風蛋糕、<strong>IRVINS</strong> 鹹蛋黃魚皮。
-              </p>
+
+            <!-- Day 6 Spot 3: Souvenirs -->
+            <div class="bg-teal-50/60 p-4 rounded-xl border border-teal-200 flex flex-col justify-between space-y-3">
+              <div>
+                <div class="text-xs font-bold text-teal-800 mb-1">10:15 - 12:30 免稅採買</div>
+                <h4 class="text-sm font-bold text-slate-900 mb-1">最後必買伴手禮全清單</h4>
+                <p class="text-xs text-slate-700 leading-relaxed mb-2">
+                  樟宜機場出境管制區內免稅門市對照，採買齊全滿載歸國！
+                </p>
+              </div>
+              <div class="bg-slate-900 text-slate-100 p-2.5 rounded-lg text-[10.5px] space-y-1 border border-slate-800">
+                <div class="text-teal-300 font-bold">🏬 出境免稅店實名對照：</div>
+                <div class="space-y-0.5 text-slate-200 font-mono text-[10px]">
+                  <div>• <strong class="text-amber-300">BACHA COFFEE</strong>: 摩洛哥奢華咖啡滴濾包禮盒</div>
+                  <div>• <strong class="text-emerald-300">BENGAWAN SOLO</strong>: 斑蘭綠蛋糕 Pandan Cake</div>
+                  <div>• <strong class="text-amber-300">IRVINS SALTED EGG</strong>: 鹹蛋黃魚皮 Salmon Skin</div>
+                  <div>• <strong class="text-slate-100">TWG TEA</strong>: 1837 Black Tea 頂級手工黃罐茶</div>
+                  <div>• <strong class="text-slate-100">YA KUN KAYA TOAST</strong>: 招牌咖椰醬雙入禮盒</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
